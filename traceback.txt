@@ -1,22 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 52, in script
-    sass "Hello friend! I am sas o quatch"
-Exception: Sayer 'sass' is not defined.
+  File "game/script.rpy", line 33, in script
+    define me = Character(player_name, color="#2ff5c7")
+  File "game/script.rpy", line 33, in <module>
+    define me = Character(player_name, color="#2ff5c7")
+NameError: name 'player_name' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 52, in script
-    sass "Hello friend! I am sas o quatch"
-  File "E:\Deep Programs\renpy-6.99.14.3-sdk\renpy\ast.py", line 624, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "E:\Deep Programs\renpy-6.99.14.3-sdk\renpy\ast.py", line 537, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'sass' is not defined.
+  File "game/script.rpy", line 33, in script
+    define me = Character(player_name, color="#2ff5c7")
+  File "E:\Deep Programs\renpy-6.99.14.3-sdk\renpy\ast.py", line 1946, in execute
+    value = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "E:\Deep Programs\renpy-6.99.14.3-sdk\renpy\python.py", line 1912, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 33, in <module>
+    define me = Character(player_name, color="#2ff5c7")
+NameError: name 'player_name' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 6.99.14.3.3347
 sasquatch 1.0
-Fri Aug 16 19:26:59 2019
+Fri Aug 16 23:19:15 2019

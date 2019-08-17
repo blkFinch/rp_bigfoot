@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 38: expected statement.
-    day++
-       ^
+File "game/custom_screens.rpy", line 15: end of line expected.
+    vbox: text "Enter your name"
+          ^
 
 Ren'Py Version: Ren'Py 6.99.14.3.3347
-Thu Aug 15 12:56:44 2019
+Fri Aug 16 23:15:09 2019

@@ -2,9 +2,10 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+default player_name = "Me"
 
 define s = Character("Sass")
-define me = Character(_("Me"), color="#2ff5c7")
+define me = Character(_("me"), color="#2ff5c7")
 define dad = Character(_("Dad"), color="#cc941d")
 
 default day = 1
@@ -20,10 +21,16 @@ label start:
 
     scene bg_bedroom
 
+    show screen day_count(day)
+
     "Boxes filled my new bedroom and the air still stank of fresh paint and carpet cleaner. We had gotten in to town two
         days ago and I still hadn't started unpacking."
 
     "I had fallen asleep fully clothed and woke up staring at the lumpy popcorn plaster on the ceiling"
+
+    call screen input_name
+    $ player_name = _return
+    define me = Character("[player_name]", color="#2ff5c7")
 
     me "Oh shoot- I'm going to be late.. I gotta get to school"
 
@@ -36,6 +43,7 @@ label start:
         
         "Stay home":
             "I continued to do nothing and go nowhere"
+            show screen hello_world
 
 label school:
 
